@@ -1,56 +1,56 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import { useCookies } from 'react-cookie'
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 const AuthModal = ({ setShowModal, setIsnSignUp, isSignUp }) => {
-  const [email, setEmail] = useState(null)
-  const [password, setPassword] = useState(null)
-  const [confirmPassword, setConfirmPassword] = useState(null)
-  const [error, setError] = useState(null)
-  const [cookie, setCookie, removeCookie] = useCookies(['user'])
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [confirmPassword, setConfirmPassword] = useState(null);
+  const [error, setError] = useState(null);
+  const [cookie, setCookie, removeCookie] = useCookies(["user"]);
 
-  let navigate = useNavigate()
+  let navigate = useNavigate();
   const handleClick = () => {
-    setShowModal(false)
-  }
+    setShowModal(false);
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
       if (isSignUp && password !== confirmPassword) {
-        setError('Passwords need to match!')
-        return
+        setError("Passwords need to match!");
+        return;
       }
       const response = await axios.post(
-        `http://localhost:8000/${isSignUp ? 'signup' : 'login'}`,
+        `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
         {
           email,
           password,
-        }
-      )
-      setCookie('AuthToken', response.data.token)
-      setCookie('UserId', response.data.userId)
+        },
+      );
+      setCookie("AuthToken", response.data.token);
+      setCookie("UserId", response.data.userId);
 
-      const success = response.status === 201
+      const success = response.status === 201;
 
-      if (success && isSignUp) navigate('/onboarding')
-      if (success && !isSignUp) navigate('/dashboard')
+      if (success && isSignUp) navigate("/onboarding");
+      if (success && !isSignUp) navigate("/dashboard");
 
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
-      console.log('Error')
+      console.log("Error");
     }
-  }
+  };
 
   return (
     <div className="auth-modal">
       <div className="close-button" onClick={handleClick}>
         ❌
       </div>
-      <h2>{isSignUp ? 'createAccount()' : 'signIn()'}</h2>
+      <h2>{isSignUp ? "createAccount()" : "signIn()"}</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
@@ -82,9 +82,12 @@ const AuthModal = ({ setShowModal, setIsnSignUp, isSignUp }) => {
         <p>{error}</p>
       </form>
       <hr />
-      <h3>appComingSoon</h3>
-      AUTH MODAL
+      <h3>
+        By creating an account you agree to all terms and conditions by
+        synchroDev
+      </h3>
+      {/*AUTH MODAL*/}
     </div>
-  )
-}
-export default AuthModal
+  );
+};
+export default AuthModal;
