@@ -23,5 +23,11 @@ Finding a hackathon team-mate is not the easiest of task. From gauging domain, e
 
 ##Full Chat functionality between users![image](https://github.com/SidM77/synchroDev_f/assets/102024701/bf5058ca-a7cb-431d-bd85-9c07d7ec8f55)
 
+## Swipe Discovery Functionality
+
+https://github.com/SidM77/synchroDev_f/assets/102024701/99dbcb34-8f2a-48c1-8a5e-8e76c5703ee1
+
+
+
 
 
