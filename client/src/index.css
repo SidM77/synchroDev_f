@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Roboto+Mono&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+* {
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.primary-title {
+  font-size: 3.8rem;
+  color: #fff;
+}
+
+h3 {
+  font-style: italic;
+}
+
+.primary-button {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  background: linear-gradient(45deg, rgb(58, 166, 185), rgb(255, 158, 170));
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+}
+
+.primary-button:hover {
+  background: linear-gradient(120deg, rgb(58, 166, 185), rgb(255, 158, 170));
+}
+
+.secondary-button {
+  color: rgb(121, 119, 119);
+  background-color: white;
+  font-weight: 500px;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: solid 2px rgb(121, 119, 119);
+  margin: 6px;
+}
+
+.secondary-button:hover {
+  color: rgb(255, 255, 255);
+  border: solid 2px rgb(255, 255, 255);
+  background: linear-gradient(120deg, rgb(58, 166, 185), rgb(255, 158, 170));
+}
+
+/* NAVBAR STYLING */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-button {
+  color: rgb(58, 166, 185);
+  background-color: white;
+  font-size: 15px;
+  padding: 0px 25px;
+  border-radius: 15px;
+  border: none;
+  margin: 10px;
+}
+nav .nav-button:disabled {
+  background-color: #a3a3a3;
+  color: rgb(48, 100, 109);
+}
+nav .logo-container {
+  width: 250px;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+nav .logo-container .logo {
+  width: 100%;
+}
+
+/* HOMEPAGE STYLING */
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+      to bottom,
+      rgba(25, 37, 40, 0.65) 20%,
+      rgba(168, 94, 158, 0) 100%
+        /* rgba(25, 37, 40, 0.65) 20%,
+      rgba(168, 94, 158, 0) 100% */
+    ),
+    url('./images/sssynchroDev.png');
+}
+
+.overlay2 {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3) 20%,
+      rgba(255, 255, 255, 0.3) 100%
+    ),
+    url('./images/sssynchroDev-logo.png');
+}
+
+.overlay3 {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.957) 20%,
+      rgba(221, 221, 221, 0.9) 100%
+    ),
+    url('./images/whitechat2.jpg');
+}
+
+.home {
+  margin-top: 30vh;
+}
+
+/* AUTH_MODAL */
+
+.auth-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 360px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.auth-modal .close-button {
+  float: right;
+}
+
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal input[type='password'],
+.auth-modal input[type='email'] {
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
+}
+
+/* ONBOARDING */
+
+.onboarding form {
+  display: flex;
+  justify-content: center;
+}
+
+.onboarding form section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 35%;
+  text-align: start;
+}
+
+.onboarding form input {
+  padding: 15px 20px;
+  margin: 10px 0px;
+  font-size: 13px;
+  border: solid 2px rgb(255, 158, 170);
+  border-radius: 5px;
+}
+
+.onboarding form input::-webkit-inner-spin-button,
+.onboarding form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.onboarding form label {
+  margin: 10px 0;
+}
+
+.onboarding form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.onboarding form .multiple-input-container input {
+  margin-right: 10px;
+}
+
+.onboarding form .multiple-input-container label {
+  padding: 10px;
+  border: solid 4px rgb(196, 210, 212);
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin-right: 10px;
+}
+
+.onboarding form .multiple-input-container input[type='radio'] {
+  display: none;
+}
+
+.onboarding form .multiple-input-container input[type='number'] {
+  width: 10%;
+}
+
+.onboarding form input[type='radio']:checked + label {
+  border: solid 4px rgb(79, 168, 184);
+}
+
+.onboarding form input[type='submit']:hover {
+  background: linear-gradient(120deg, rgb(58, 166, 185), rgb(255, 158, 170));
+  color: #fff;
+}
+
+.onboarding .photo-container img {
+  width: 300px;
+  padding-left: 100px;
+}
+/* DASHBOARD_____ */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.dashboard .card-container {
+  width: 360px;
+  height: 585px;
+}
+
+.card {
+  width: 360px;
+  height: 585px;
+  box-shadow: 0px 0px 60px 0px rgba(179, 65, 107, 0.5);
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  padding-left: 120px;
+}
+
+.card h3 {
+  position: absolute;
+  top: 30px;
+  margin: 20px;
+  color: #fff;
+  font-size: 2rem;
+}
+.card h4 {
+  position: absolute;
+  bottom: 10px;
+  margin: 20px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* *****CHAT CONTAINER **** */
+
+.chat-container {
+  background-color: #fff;
+  box-shadow: 0px 0px 100px 0px rgb(110, 175, 187);
+  width: 30%;
+  text-align: left;
+  z-index: 1;
+}
+
+.chat-container .chat-container-header {
+  background: linear-gradient(45deg, rgb(58, 166, 185), rgb(255, 158, 170));
+  color: #fff;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-container .option {
+  border: none;
+  background-color: #fff;
+  border-bottom: rgb(58, 166, 185) solid 4px;
+  font-size: 20px;
+  margin: 2px;
+  padding: 10px;
+}
+
+.chat-container .option:disabled {
+  border-bottom: rgb(124, 164, 172) solid 4px;
+}
+
+.chat-container .profile {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.chat-container .log-out-icon {
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+.img-container {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.loading-animation {
+  width: 300px;
+}
+
+/* ***********CHAT DISPLAY********** */
+.chat-display {
+  padding: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.chat-input {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-input textarea {
+  width: 18rem;
+  border-radius: 30px;
+}
+
+.loading {
+  color: rgb(255, 158, 170);
+}
+
+/* <!--__________SCROLLLBARRR_________--> */
+
+/*
+ *  STYLE 7
+ */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(100, 146, 239)),
+    color-stop(0.72, rgb(125, 174, 235)),
+    color-stop(0.46, rgb(255, 158, 170))
+  );
+}
