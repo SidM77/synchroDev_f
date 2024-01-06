@@ -1,3 +1,5 @@
+
+https://github.com/SidM77/synchroDev_f/assets/102024701/2e7a0011-a167-4a8b-83f5-26decb8b990e
 # SynchroDev- An application to meet fellow developers and collaborate for Hackathons(MERN FullStack Project)
 
 Finding a hackathon team-mate is not the easiest of task. From gauging domain, expertise to availability, there are a lot of factors to consider. SynchroDev is a platform that aims to make this process easier. 
@@ -16,3 +18,12 @@ Finding a hackathon team-mate is not the easiest of task. From gauging domain, e
 - ReactJS for frontend
 - NodeJS and ExpressJS for backend
 - MongoDB Atlas for database
+
+##Landing Page![Screenshot 2024-01-06 132750](https://github.com/SidM77/synchroDev_f/assets/102024701/9e98cfa8-c5dd-4af6-a428-886db4576022)
+
+
+##Full Chat functionality between users![image](https://github.com/SidM77/synchroDev_f/assets/102024701/bf5058ca-a7cb-431d-bd85-9c07d7ec8f55)
+
+
+##Swiping discovery functionality Uploading synchroDev - Google Chrome 2024-01-06 13-37-30.mp4…
+
